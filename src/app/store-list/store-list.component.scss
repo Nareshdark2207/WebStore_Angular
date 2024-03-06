@@ -1,0 +1,175 @@
+.card-l {
+	width: 95%!important;
+	margin-top: -10px;
+	.container{
+        .example-full-width {
+            width: 100%;
+}
+
+    mat-label {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+    }
+  }
+}
+
+
+
+.card-r {
+	width: 95% !important;
+	height: 30%;
+	margin-top: -107%;
+	mat-list-option{
+    font-family: 'Raleway', sans-serif;
+}
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-item + .flex-item {
+	margin-left: 75px;
+}
+
+.form-controller {
+	padding: 25px;
+}
+
+.form-controller .title:after {
+	content: '';
+	background-color: #673ab7;
+	height: 4px;
+	width: 60px;
+	margin: 5px 0 0;
+	display: block;
+	clear: both;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 700;
+	font-family: 'Raleway', sans-serif;
+}
+
+.subtitle {
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	color: #878787;
+}
+
+.container {
+	margin-top: -20px;
+}
+
+.card {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.card .content {
+	z-index: 2;
+	width: 100%;
+	position: absolute;
+	bottom: -100px;
+	transition: all 0.7s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	height: 65px;
+	background: #111;
+}
+
+.card .image {
+	z-index: 1;
+	height: 100%;
+}
+
+.card img {
+	height: 100%;
+	width: 100%;
+	transition: all 0.5s ease;
+	transform: scale(1.2);
+}
+
+.card:hover .content {
+	bottom: 0px;
+	color: #fff;
+}
+
+.card:hover .image img {
+	transform: scale(1);
+}
+
+.card .content span:first-child {
+	text-transform: uppercase;
+	margin-top: -5px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #fff;
+	font-size: 10px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.card .content span:last-child {
+	font-size: 10px;
+	color: #18cfab;
+	text-align: center;
+	font-weight: 700;
+	font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+	.card {
+		width: 50%;
+	}
+
+	.card .content {
+		bottom: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.card {
+		width: 100%;
+	}
+}
+
+
+.activebutton span{
+	position: relative;
+    top: 14px;
+	left: 5%;
+}
+
+.activebutton {
+	background-color: #f1f3f6;
+	font-weight:700;
+	cursor: pointer;
+	border-left: 6px solid #673ab7 !important;
+    height: 65px!important;;
+	margin-left: -32px;
+    width: 126% !important;
+}
+.nav-link{
+    height: 65px!important;;	
+	color:#111;
+}
+
+nav{
+	padding: 10px 16px;
+	font-family: 'Raleway', sans-serif;
+	font-size:16px;
+}
+
+
+.store-info {
+    position: relative;
+    top: 12px;
+    right: 5%;
+}

@@ -1,0 +1,84 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+	<mat-grid-list cols="4" rowHeight="300px" gutterSize="0px">
+		<mat-grid-tile colspan="1" rowspan="2">
+			<mat-card class="card-r">
+				<!-- <mat-selection-list [multiple]="false">
+					<mat-list-option routerLink="/store-info" routerLinkActive="active" ariaCurrentWhenActive="page"> Store Information </mat-list-option>
+					<mat-list-option routerLink="/store-list" routerLinkActive="active" ariaCurrentWhenActive="page"> StoreList </mat-list-option>
+				</mat-selection-list> -->
+				<nav >
+					<a class="nav-link" routerLink="/store-info" routerLinkActive="activebutton"
+					ariaCurrentWhenActive="page" ><span class="store-info">Store Information</span></a> 
+					<a class="nav-link active" routerLink="/store-list" routerLinkActive="activebutton"
+					ariaCurrentWhenActive="page"><span class="store-list">StoreList</span></a>
+				</nav>
+			</mat-card>
+		</mat-grid-tile>
+		<mat-grid-tile colspan="3" rowspan="2">
+			<mat-card class="card-l">
+				<div class="form-controller">
+					<h3 class="title">StoreList</h3>
+					<p class="subtitle">Please review the details below and confirm it</p>
+				</div>
+				<div class="container mt-1">
+					<div class="row  ">
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">Nilgiris</span> <span class="category">Departmental Store</span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/img001.jpg" alt="" /> </div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">Bata Showroom</span> <span class="category"> Shoes Store </span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/img02.jpg" alt="" /> </div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">Coffee Day</span> <span class="category">Cafe</span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/3.jpg" alt="" /> </div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">Medplus</span> <span class="category">Pharmacy</span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/img04.jpg" alt="" /> </div>
+							</a>
+						</div>
+					</div>
+					<div class="row mt-4 mb-4 ">
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">Jewellery Stores</span> <span class="category">Jewellers</span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/img05.jpg" alt="" /> </div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">Furniture Stores</span> <span class="category">Home Furniture </span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/img06.jpg" alt="" /> </div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">The Raymonds Shop</span> <span class="category">Garment retailers</span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/img07.jpg" alt="" /> </div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<a href="#" class="card">
+								<div class="content"> <span class="shoptitle">Yamaha Showroom</span> <span class="category">Motorcycle</span> </div>
+								<div class="image"> <img class="imgdm" src="../assets/img/img08.jpg" alt="" /> </div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</mat-card>
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>
+
+<app-footer></app-footer>

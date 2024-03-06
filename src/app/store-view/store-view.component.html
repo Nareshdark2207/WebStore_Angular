@@ -1,0 +1,119 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+	<mat-grid-list cols="4" rowHeight="400px" gutterSize="0px">
+		<mat-grid-tile colspan="1" rowspan="2">
+			<mat-card class="card-r">
+				<!-- <mat-selection-list [multiple]="false">
+					<mat-list-option routerLink="/store-info" routerLinkActive="active" ariaCurrentWhenActive="page"> Store Information </mat-list-option>
+					<mat-list-option routerLink="/store-list" routerLinkActive="active" ariaCurrentWhenActive="page"> StoreList </mat-list-option>
+				</mat-selection-list> -->
+				<nav >
+					<a class="nav-link " routerLink="/store-info" routerLinkActive="activebutton"
+					ariaCurrentWhenActive="page" ><span class="store-info">Store Information</span></a> 
+					<a class="nav-link active" routerLink="/store-view" routerLinkActive="activebutton"
+					ariaCurrentWhenActive="page"><span class="store-list">StoreList</span></a>
+				</nav>
+			</mat-card>
+		</mat-grid-tile>
+		<mat-grid-tile colspan="3" rowspan="2">
+			<mat-card class="card-l">
+				<div class="form-controller">
+                    <div class="d-flex">
+					<h3 class="title">StoreList</h3>&nbsp;&nbsp;
+                    <mat-icon svgIcon="editable" aria-hidden="false" aria-label="Example thumbs up SVG icon" (click)="editable = !editable" ></mat-icon>
+
+                </div>
+					<p class="subtitle">Please review the details below and confirm it</p>
+				</div>
+				<div class="container mt-1">
+
+                    <form novalidate class="myForm">
+						<div class="container">
+							<div class="avatar-upload">
+								<div class="avatar-edit">
+									<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+									<label for="imageUpload"></label>
+								</div>
+								<div class="avatar-preview">
+									<div id="imagePreview" style="background-image: url('../assets/img/img001.jpg');">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline" >
+									<mat-label>Email Address</mat-label>
+									<input matInput placeholder="Enter your email address" value="nareshs@gmail.com" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Name</mat-label>
+									<input matInput placeholder="Enter your store name" value="Naresh S" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Address</mat-label>
+									<input matInput placeholder="Enter your store address" value="Old-No-100/2, velechery, chennai" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Mobile Number</mat-label>
+									<input matInput placeholder="Enter your mobile number" value="+91-98765 43210" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>City</mat-label>
+									<input matInput placeholder="Enter your store name" value="Chennai" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>State</mat-label>
+									<input matInput placeholder="Enter your state" value="TamilNadu" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="row mt-3 ">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Zipcode </mat-label>
+									<input matInput placeholder="Enter your zipcode" value="6000042" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Supervisor Name</mat-label>
+									<input matInput placeholder="Enter your supervisor name" value="Ravishankaramoorthy J.K" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Supervisor Mobile number</mat-label>
+									<input matInput placeholder="Enter your supervisor mobile number" value="+91-87654 32109" [readonly]="!editable">
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="flex mt-4 mb-4">
+							<div class="flex-item">
+								<button mat-raised-button type="submit" class="btn-6 btn-6a">Save</button>
+							</div>
+							<div class="flex-item">
+								<button mat-stroked-button class="btn-0 btn-0a" type="submit">Reset</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</mat-card>
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>
+
+<app-footer></app-footer>

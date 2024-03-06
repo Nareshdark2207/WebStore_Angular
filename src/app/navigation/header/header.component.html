@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-primary p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><div class="logo">Store<mat-icon svgIcon="shopify" aria-hidden="false" aria-label=""></mat-icon>henry</div></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/store-info" routerLinkActive="active" >Store Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about" routerLinkActive="active" >About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a>
+          </li>
+          <mat-menu #appMenu="matMenu">
+            <ng-template matMenuContent>
+                <button mat-menu-item><span matBadge="4" matBadgeOverlap="false" matBadgeColor="warn">Notification</span></button>
+                <button mat-menu-item>Settings</button>
+                <button mat-menu-item>Logout</button>
+            </ng-template>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="appMenu">
+            <img class="img-fluid" src="../assets/img/user.png" alt="">
+          </button>
+        </ul>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Raleway, "Helvetica Neue", sans-serif; background-color: #f1f3f6;}
+.mat-menu-panel{
+    min-width: 140px!important;
+}
+
+.mat-badge-content {
+    font-weight: 600;
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+.mat-badge-medium .mat-badge-content {
+    width: 18px !important;
+    height: 18.5px !important;
+    line-height: 16px !important;
+}
+.mat-badge-medium.mat-badge-after .mat-badge-content {
+  right: -15px;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+     color: #673ab7!important;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+    color: #f44336!important;
+}
+.mat-error{
+    font-family: 'Raleway', sans-serif;
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  display: block;
+  height: 65px!important;
+  width: 111.5%!important;
+  padding: 0;
+  margin-left: -16px!important;
+}
+.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text {
+  padding-left: 12px!important;
+  padding-right: 12px;
+}
+
+.mat-list-single-selected-option, .mat-list-single-selected-option:hover, .mat-list-single-selected-option:focus {
+  background-color: #f1f3f6;
+  font-weight:700;
+}
+  .mat-list-single-selected-option:after {
+    content: "";
+    border-left: 6px solid #673ab7 !important;
+    height: 65px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+
+.mat-list-option:hover{
+  background-color: #f1f3f6;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-ripple, .mat-list-base .mat-list-option .mat-list-item-ripple {
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: relative!important;
+  pointer-events: none;
+}
+.mat-icon-button{
+  box-shadow:  rgb(50, 50, 93) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background: #764ac3;
+  width: 42px!important;
+  height: 42px!important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-prefix {
+  top: -0.2em!important;
+}
+
+.navbar-dark .navbar-toggler{
+  color: transparent !important;;
+  background-color: transparent!important;
+  border-color: transparent!important;
+}
+// .navbar-expand-lg .navbar-nav .nav-link {
+//   padding-right: 1.5rem!important;
+//   padding-left: 1.5rem!important;
+// }
+.dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: -10px!important;
+}
+
+.mat-icon{
+  font-size: 20px;
+}

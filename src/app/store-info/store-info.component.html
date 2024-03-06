@@ -1,0 +1,132 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+	<mat-grid-list cols="4" rowHeight="400px" gutterSize="0px">
+		<mat-grid-tile colspan="1" rowspan="2">
+			<mat-card class="card-r">
+				<!-- <mat-selection-list #shoes [multiple]="false">
+					<mat-list-option routerLinkActive="active"> Store Information </mat-list-option>
+					<mat-list-option> StoreList </mat-list-option>
+				</mat-selection-list> -->
+				<nav >
+					<a class="nav-link active" routerLink="/store-info" routerLinkActive="activebutton"
+					ariaCurrentWhenActive="page" ><span class="store-info">Store Information</span></a> 
+					<a class="nav-link" routerLink="/store-list" routerLinkActive="activebutton"
+					ariaCurrentWhenActive="page"><span class="store-list">StoreList</span></a>
+				</nav>
+			</mat-card>
+		</mat-grid-tile>
+		<mat-grid-tile colspan="3" rowspan="2">
+			<mat-card class="card-l">
+				<div class="form-controller">
+					<h3 class="title">Store Information</h3>
+					<p class="subtitle">Please fill the details below so that we can get in the contact you</p>
+				</div>
+				<div class="container p-4">
+					<form novalidate>
+						<div class="container">
+							<div class="avatar-upload">
+								<div class="avatar-edit">
+									<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+									<label for="imageUpload"></label>
+								</div>
+								<div class="avatar-preview">
+									<div id="imagePreview" style="background-image: url('../assets/img/blank.png');">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Email Address</mat-label>
+									<input matInput placeholder="Enter your email address" [formControl]="email" required>
+									<mat-error *ngIf="email.hasError('email') && !email.hasError('required')"> Please enter a valid email address </mat-error>
+									<mat-error *ngIf="email.hasError('required')"> Email address is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Name</mat-label>
+									<input matInput placeholder="Enter your store name" [formControl]="name" required>
+									<mat-error *ngIf="name.hasError('name') && !name.hasError('required')"> Please enter a valid name </mat-error>
+									<mat-error *ngIf="name.hasError('required')"> Name is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Address</mat-label>
+									<input matInput placeholder="Enter your store address" [formControl]="address" required>
+									<mat-error *ngIf="address.hasError('address') && !address.hasError('required')"> Please enter a valid address </mat-error>
+									<mat-error *ngIf="address.hasError('required')"> Address is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Mobile Number</mat-label> <span matPrefix>+91 &nbsp;</span>
+									<input matInput placeholder="Enter your mobile number" [formControl]="number" required>
+									<mat-error *ngIf="number.hasError('number') && !number.hasError('required')"> Please enter a valid mobile number </mat-error>
+									<mat-error *ngIf="number.hasError('required')"> Mobile Number is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>City</mat-label>
+									<input matInput placeholder="Enter your store name" [formControl]="city" required>
+									<mat-error *ngIf="city.hasError('city') && !city.hasError('required')"> Please enter a valid city </mat-error>
+									<mat-error *ngIf="city.hasError('required')"> City is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>State</mat-label>
+									<input matInput placeholder="Enter your state" [formControl]="state" required>
+									<mat-error *ngIf="state.hasError('state') && !state.hasError('required')"> Please enter a valid state </mat-error>
+									<mat-error *ngIf="state.hasError('required')"> State is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="row mt-3 ">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Zipcode </mat-label>
+									<input matInput placeholder="Enter your zipcode" [formControl]="code" required>
+									<mat-error *ngIf="code.hasError('code') && !code.hasError('required')"> Please enter a valid zipcode </mat-error>
+									<mat-error *ngIf="code.hasError('required')"> Zipcode is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Supervisor Name</mat-label>
+									<input matInput placeholder="Enter your supervisor name" [formControl]="sname" required>
+									<mat-error *ngIf="sname.hasError('sname') && !sname.hasError('required')"> Please enter a valid name </mat-error>
+									<mat-error *ngIf="sname.hasError('required')"> Supervisor Name is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<mat-form-field class="example-full-width" appearance="outline">
+									<mat-label>Supervisor Mobile number</mat-label> <span matPrefix>+91 &nbsp;</span>
+									<input matInput placeholder="Enter your supervisor mobile number" [formControl]="snumber" required>
+									<mat-error *ngIf="snumber.hasError('snumber') && !snumber.hasError('required')"> Please enter a valid mobile number </mat-error>
+									<mat-error *ngIf="snumber.hasError('required')"> Supervisor Mobile Number is <strong>required</strong> </mat-error>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="flex mt-4">
+							<div class="flex-item">
+								<button mat-raised-button type="submit" class="btn-6 btn-6a">Save</button>
+							</div>
+							<div class="flex-item">
+								<button mat-stroked-button class="btn-0 btn-0a" type="submit">Cancel</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</mat-card>
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>
+
+<app-footer></app-footer>
